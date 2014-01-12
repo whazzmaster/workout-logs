@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="small-4 columns">
+    {{#if previousSlug}}
+    <a href="#logs/{{previousSlug}}" class="button round small">&larr; {{formatDate previousSlug "long"}}</a>
+    {{/if}}
+  </div>
+  <div class="small-4 columns">
+    <h5 style="text-align:center;">{{formatDate logDate "long"}}</h5>
+  </div>
+  <div class="small-4 columns" style="text-align:right;">
+    {{#if nextSlug}}
+    <a href="#logs/{{nextSlug}}" class="button round small">{{formatDate nextSlug "long"}} &rarr;</a>
+    {{/if}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-6 columns" style="text-align:left;">
+    <h4>Weight</h4>
+    <p>{{formatWeight weight}}</p>
+  </div>
+  <div class="large-6 columns" style="text-align:right;">
+    <h4>Body Fat</h4>
+    <p>{{formatBodyFat bodyFat}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <h4>Meals</h4>
+    {{#if meals.length}}
+    <ul class="no-bullet">
+      {{#each meals}}<li>{{this}}</li>{{/each}}
+    </ul>
+    {{else}}
+    <p>No meals logged.</p>
+    {{/if}}
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <h4>Workout</h4>
+    {{#if workout.length}}
+    <ul class="no-bullet">
+      {{#each workout}}<li>{{this}}</li>{{/each}}
+    </ul>
+    {{else}}
+      <p>No workout logged.</p>
+    {{/if}}
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <h4>Notes</h4>
+    {{#if notes}}
+    <p>{{notes}}</p>
+    {{else}}
+    <p>No notes logged.</p>
+    {{/if}}
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <a href="#logs/{{slug}}/edit" class="button">Edit Log</a>
+  </div>
+</div>

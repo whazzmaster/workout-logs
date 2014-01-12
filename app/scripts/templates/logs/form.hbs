@@ -1,0 +1,79 @@
+<form id="editLogForm">
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Date</label>
+      <input type="text" id="logDate" placeholder="Enter log date" value="{{slug}}" />
+    </div>
+    <div class="large-4 columns">
+      <label>Weight</label>
+      <input type="text" id="weight" placeholder="Enter weight" value="{{weight}}" />
+    </div>
+    <div class="large-4 columns">
+      <label>Body Fat</label>
+      <input type="text" id="bodyFat" placeholder="Enter body fat" value="{{bodyFat}}" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Meals</h3>
+      <div id="meals">
+        {{#each meals}}
+        <div class="row meal collapse">
+          <div class="large-11 columns">
+            <input type="text" value="{{this}}" />
+          </div>
+          <div class="large-1 columns">
+            <button class="postfix alert"><i class="fa fa-times-circle"></i></button>
+          </div>
+        </div>
+        {{/each}}
+        <div class="row meal collapse">
+          <div class="large-11 columns">
+            <input type="text" placeholder="Add meal information" />
+          </div>
+          <div class="large-1 columns">
+            <button class="postfix alert"><i class="fa fa-times-circle"></i></button>
+          </div>
+        </div>
+      </div>
+      <button id="addMeal" class="tiny">Add Meal</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Workout</h3>
+      <div id="workout">
+        {{#each workout}}
+        <div class="row exercise collapse">
+          <div class="large-11 columns">
+            <input type="text" value="{{this}}" />
+          </div>
+          <div class="large-1 columns">
+            <button class="postfix alert"><i class="fa fa-times-circle"></i></button>
+          </div>
+        </div>
+        {{/each}}
+        <div class="row exercise collapse">
+          <div class="large-11 columns">
+            <input type="text" placeholder="Add exercise information" />
+          </div>
+          <div class="large-1 columns">
+            <button class="postfix alert"><i class="fa fa-times-circle"></i></button>
+          </div>
+        </div>
+      </div>
+      <button id="addExercise" class="tiny">Add Exercise</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Notes</h3>
+      <textarea id="notes" placeholder="Add daily notes">{{notes}}</textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <button type="submit">Save Log</button>
+    </div>
+  </div>
+</form>

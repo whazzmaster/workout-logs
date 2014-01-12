@@ -1,0 +1,83 @@
+<form>
+  <div class="row">
+    <div class="large-4 columns">
+      <label for="weekNumber">Week Number</label>
+      <input type="text" id="weekNumber" value="{{weekNumber}}" />
+    </div>
+    <div class="large-4 columns">
+      <label for="startDate">Start Date</label>
+      <input type="text" id="startDate" value="{{formatDate startDate "short"}}" />
+    </div>
+    <div class="large-4 columns">
+      <label for="endDate">End Date</label>
+      <input type="text" id="endDate" value="{{formatDate endDate "short"}}" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>START</th>
+            <th>LAST WEEK </th>
+            <th>TODAY</th>
+            <th>WEEKLY CHANGE</th>
+            <th>TOTAL CHANGE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Weight</td>
+            <td>{{formatWeight starting.weight}}</td>
+            <td>{{formatWeight lastWeek.weight}}</td>
+            <td><input type="text" id="weight" value="{{thisWeek.weight}}"/></td>
+            <td>{{formatWeight weeklyChange.weight}}</td>
+            <td>{{formatWeight totalChange.weight}}</td>
+          </tr>
+          <tr>
+            <td class="row-label">Body Fat</td>
+            <td>{{formatBodyFat starting.bodyFat}}</td>
+            <td>{{formatBodyFat lastWeek.bodyFat}}</td>
+            <td><input type="text" id="bodyFat" value="{{thisWeek.bodyFat}}"/></td>
+            <td>{{formatBodyFat weeklyChange.bodyFat}}</td>
+            <td>{{formatBodyFat totalChange.bodyFat}}</td>
+          </tr>
+          <tr>
+            <td class="row-label">BMI</td>
+            <td>{{formatNumber starting.bmi}}</td>
+            <td>{{formatNumber lastWeek.bmi}}</td>
+            <td><input type="text" id="bmi" value="{{thisWeek.bmi}}"/></td>
+            <td>{{formatNumber weeklyChange.bmi}}</td>
+            <td>{{formatNumber totalChange.bmi}}</td>
+          </tr>
+          <tr>
+            <td class="row-label">Lean Weight</td>
+            <td>{{formatWeight starting.leanWeight}}</td>
+            <td>{{formatWeight lastWeek.leanWeight}}</td>
+            <td>{{formatWeight thisWeek.leanWeight}}</td>
+            <td>{{formatWeight weeklyChange.leanWeight}}</td>
+            <td>{{formatWeight totalChange.leanWeight}}</td>
+          </tr>
+          <tr>
+            <td class="row-label">Fat Weight</td>
+            <td>{{formatWeight starting.fatWeight}}</td>
+            <td>{{formatWeight lastWeek.fatWeight}}</td>
+            <td>{{formatWeight thisWeek.fatWeight}}</td>
+            <td>{{formatWeight weeklyChange.fatWeight}}</td>
+            <td>{{formatWeight totalChange.fatWeight}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-4 columns">
+      <button type="submit">Save Summary</button>
+    </div>
+    <div class="large-8 columns warning">
+      <b>Obligatory Warnings</b>: All measurements are based on a $150 wi-fi scale, so they are to be taken with a grain of salt. These measurements and diffs are meant to illustrate broad trends in weight loss.
+    </div>
+  </div>
+</form>

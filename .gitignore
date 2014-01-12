@@ -1,0 +1,7 @@
+.sass-cache
+dist
+temp
+.ruby-gemset
+.ruby-version
+node_modules
+testing

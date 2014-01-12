@@ -1,0 +1,85 @@
+@import 'foundation';
+
+$bluish: #00628B;
+$greenish: #81A594;
+$lightish: #E6E6DC;
+
+html, body {
+  background-color: $bluish;
+  margin: 0;
+}
+
+#site-container {
+  width: 768px;
+  margin: 0 auto;
+  background-color: $lightish;
+
+  > header {
+    padding: 5px 30px;
+    h1 {
+      font-weight: 300;
+      border-bottom: 1px solid $bluish;
+    }
+    a {
+      margin-top: 1em;
+    }
+  }
+
+  > footer {
+    font-size: 14px;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+
+#main-view {
+  padding: 10px 30px;
+}
+
+#noProfile {
+  text-align: center;
+}
+
+.profile {
+  text-align: right;
+  padding: 10px;
+  dl { margin-bottom: 0; }
+  a { margin-bottom: 0; }
+}
+
+.pull-right {
+  float: right;
+}
+
+table {
+  width: 100%;
+  thead {
+    tr {
+      th {
+        text-align: center;
+        width: 15%;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        text-align: center;
+        input[type="text"] {
+          margin: 0;
+          text-align: center;
+          width: 100%;
+        }
+      }
+      td.row-label { text-align: left; }
+    }
+  }
+}
+
+.warning {
+  font-size: 12px;
+  border: 1px solid $greenish;
+  padding: 10px;
+  color: #666;
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Workout Logs Tests</title>
+  <link rel="stylesheet" href="css/qunit.css">
+
+  <script src="js/lib/qunit.js"></script>
+  <script type="text/javascript">QUnit.config.autostart = false;</script>
+  <script type="text/javascript" src="js/lib/require.js"></script>
+  <script type="text/javascript">
+    window.addEventListener("load", function onLoad() {
+      require.config({
+        paths: {
+          'jquery': 'js/lib/jquery',
+          'underscore': 'js/lib/underscore',
+          'backbone': 'js/lib/backbone',
+          'marionette': 'js/lib/marionette',
+          'moment': 'js/lib/moment',
+          'handlebars': 'js/lib/handlebars',
+          'localStorage': 'js/lib/localStorage',
+          'models': 'js/src/models',
+          'collections': 'js/src/collections',
+          'helpers': 'js/src/helpers',
+          'views': 'js/src/views',
+          'templates': 'js/src/templates',
+          'test': 'js/test'
+        },
+
+        shim: {
+          jquery : {
+            exports : 'jQuery'
+          },
+          underscore : {
+            exports : '_'
+          },
+          backbone : {
+            deps : ['jquery', 'underscore'],
+            exports : 'Backbone'
+          },
+          localStorage: {
+            deps: ['underscore']
+          },
+          marionette : {
+            deps : ['jquery', 'underscore', 'backbone'],
+            exports : 'Marionette'
+          },
+          Handlebars: {
+            exports: 'Handlebars'
+          }
+        },
+
+        map: {
+         '*':{
+            'hbs/handlebars': 'Handlebars'
+          }
+        }
+      });
+
+      // Without this setTimeout, the specs don't always get execute in webKit browsers
+      setTimeout(function () {
+        //load tests using require
+        require([
+          'test/collections/dailyLogs',
+          'test/collections/weeklySummaries'
+          ], function () {
+          //now trigger them.
+          QUnit.start();
+        });
+
+      }, 10);
+      window.removeEventListener("load", onLoad, true);
+    }, true);
+  </script>
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+</body>
+</html>

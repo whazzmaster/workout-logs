@@ -1,0 +1,27 @@
+{
+  "name": "workout-log",
+  "description": "An application to track workouts and weight-loss.",
+  "version": "0.1.0",
+  "homepage": "http://localhost:8000/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whazzmaster/workout-log"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": {
+    "name": "Zachery Moneypenny <whazzmaster@gmail.com>"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-qunit": "~0.3.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.6.0"
+  }
+}

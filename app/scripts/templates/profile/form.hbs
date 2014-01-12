@@ -1,0 +1,37 @@
+<div id="editProfile">
+  <div class="row" style="padding-bottom:10px;">
+    <div class="large-12 columns">
+      In order to calculate the weekly summaries we need to know a little bit about
+      where you're starting from. Please fill out the below form and it will be saved
+      for future calculations.
+    </div>
+  </div>
+
+  <form id="editProfileForm">
+    <div class="row">
+      <div class="large-6 columns">
+        <label>Name</label>
+        <input type="text" id="name" value="{{name}}" />
+      </div>
+      <div class="large-6 columns">
+        <label>Starting Weight (pounds)</label>
+        <input type="text" id="startingWeight" value="{{startingWeight}}" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <label>Starting BMI</label>
+        <input type="text" id="startingBMI" value="{{startingBMI}}" />
+      </div>
+      <div class="large-6 columns">
+        <label>Starting Body Fat %</label>
+        <input type="text" id="startingBodyFat" value="{{startingBodyFat}}" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <button type="submit" class="button">Save Profile</button>
+      </div>
+    </div>
+  </form>
+</div>
